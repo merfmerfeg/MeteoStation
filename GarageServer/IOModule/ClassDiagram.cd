@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Главный модуль должен уметь: &#xD;&#xA;Конструктор -&gt; Принимает путь до файла конфигурации&#xD;&#xA;&#xD;&#xA;1. Получить список опрашиваемых управляемых Tag, со всех устройств;&#xD;&#xA;2. Получить данные по всем Tag;&#xD;&#xA;3. Получить данные по определенному Tag;&#xD;&#xA;4. Осуществить подписку на список Tag (Tag) ;&#xD;&#xA;	4.1. Уведомить что произошло изменение;&#xD;&#xA;5. Отправить команду на Tag (параметры)">
+    <Position X="9.75" Y="0.5" Height="2.312" Width="3.606" />
+  </Comment>
+  <Comment CommentText="Порядок загрузки:&#xD;&#xA;1. Вызываем конструктор класса IODataManager, передаем туда путь до конфигурации;&#xD;&#xA;2. Происходит инициализация класса Configuration с путем до конфигурации;&#xD;&#xA;3. Configuration считывает xml, создает экземпляры классов IDevice в Devices, заполняет Tags;&#xD;&#xA;4. Заполняем Devices в IODataManager;&#xD;&#xA;============================&#xD;&#xA;">
+    <Position X="0.562" Y="4.594" Height="1.729" Width="3.377" />
+  </Comment>
+  <Class Name="IOModule.IODataManager">
+    <Position X="4.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAIAgAAAAAAAQAQAAgAAAgAAAAAIAAAAA=</HashCode>
+      <FileName>IODataManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IOModule.TxtDevice">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAAIAoAAAAAAIQAAAAgAAAgCAAIAIAAAAA=</HashCode>
+      <FileName>Devices\TxtDevice.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="IOModule.Tag">
+    <Position X="11.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAEQAgAAAAAAA=</HashCode>
+      <FileName>Tag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IOModule.HTTPDevice">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAAIAoAAAAAAIQAAAAgAAAgCAAIAIAAAAA=</HashCode>
+      <FileName>Devices\HTTPDevice.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="IOModule.Configuration">
+    <Position X="4.5" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Configuration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IOModule.Device">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAIAAAAAAAQAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Device.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="IOModule.IDevice">
+    <Position X="7.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAAIAoAAAAAAIQAAAAgAAAgCAAIAIAAAAA=</HashCode>
+      <FileName>Devices\IDevice.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="IOModule.TagsType">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Enums\TagsType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="IOModule.ConnectionStatus">
+    <Position X="13.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums\ConnectionStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
